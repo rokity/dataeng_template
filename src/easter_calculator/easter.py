@@ -25,7 +25,7 @@ class EasterCalculator:
         i = c // 4
         k = c % 4
         temp_l = (32 + 2 * e + 2 * i - h - k) % 7  # renamed from `l`
-        temp_m = (a + 11 * h + 22 * temp_l) // 451
-        month = (h + temp_l - 7 * temp_m + 114) // 31
-        day = ((h + temp_l - 7 * temp_m + 114) % 31) + 1
+        m = (a + 11 * h + 22 * temp_l) // 451
+        month = (h + temp_l - 7 * m + 114) // 31
+        day = ((h + temp_l - 7 * m + 114) % 31) + 1
         return date(y, month, day)
