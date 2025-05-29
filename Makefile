@@ -1,6 +1,6 @@
 # Makefile for Python project using Poetry, Black, Ruff, Pytest, and Coverage
 
-.PHONY: install lint format test coverage clean
+.PHONY: install lint format test coverage validate
 
 # Install all dependencies
 install:
@@ -29,7 +29,3 @@ validate:
 	poetry run black --check src
 	poetry run black --check tests
 	$(lint)
-
-testenv:
-	$(validate)
-	$(coverage)
