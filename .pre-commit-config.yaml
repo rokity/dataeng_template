@@ -1,0 +1,17 @@
+-   repo: local
+    hooks:
+      - id: lint
+        name: Run lint via Makefile
+        entry: make lint
+        language: system
+        types: [python]
+        always_run: true
+        pass_filenames: false
+        
+      - id: formatter
+        name: Run black formatter via Makefile
+        entry: make format
+        language: system
+        types: [python]
+        always_run: true
+        pass_filenames: false
