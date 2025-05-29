@@ -1,0 +1,16 @@
+[project]
+name = "data_engineer_template_project"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Riccardo Amadio", email = "riccardo.amadio1@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+]
+[tool.poetry]
+package-mode = false
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
