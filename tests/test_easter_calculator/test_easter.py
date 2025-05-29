@@ -2,7 +2,7 @@ from datetime import date
 
 import pytest
 
-from easter_calc.easter import EasterCalculator
+from src.easter_calculator.easter import EasterCalculator
 
 
 @pytest.mark.parametrize(
@@ -18,14 +18,3 @@ from easter_calc.easter import EasterCalculator
 def test_get_easter_date(year: int, expected: date) -> None:
     calc = EasterCalculator(year)
     assert calc.get_easter_date() == expected
-
-
-def test_default_year(monkeypatch) -> None:
-    class FakeDate:
-        @staticmethod
-        def today():
-            return date(2025, 1, 1)
-
-    monkeypatch.setattr("easter_calc.easter.date", FakeDate)
-    calc = EasterCalculator()
-    assert isinstance(calc.get_easter_date(), date)

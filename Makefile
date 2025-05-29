@@ -5,6 +5,7 @@
 # Install all dependencies
 install:
 	poetry install
+	poetry run pre-commit install
 
 # Run Ruff linter
 lint:
@@ -25,13 +26,7 @@ coverage:
 	@echo "Coverage report generated at .coverage"
 
 testenv:
-	black --check src
-	black --check tests
+	poetry run black --check src
+	poetry run black --check tests
 	$(lint)
 	$(coverage)
-	
-# Remove .pyc files and __pycache__ directories
-clean:
-	find . -type d -name '__pycache__' -exec rm -r {} +
-	find . -type f -name '*.pyc' -delete
-	rm -rf .pytest_cache .ruff_cache htmlcov .coverage
