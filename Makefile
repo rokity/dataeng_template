@@ -25,8 +25,11 @@ coverage:
 	poetry run coverage report -m
 	@echo "Coverage report generated at .coverage"
 
-testenv:
+validate:
 	poetry run black --check src
 	poetry run black --check tests
 	$(lint)
+
+testenv:
+	$(validate)
 	$(coverage)
