@@ -23,8 +23,8 @@ class EasterCalculator:
         g = (b - f + 1) // 3
         h = (19 * a + b - d - g + 15) % 30
         i = c // 4
-        k = c % 4
-        temp_l = (32 + 2 * e + 2 * i - h - k) % 7  # renamed from `l`
+        kappa = c % 4
+        temp_l = (32 + 2 * e + 2 * i - h - kappa) % 7  # renamed from `l`
         m = (a + 11 * h + 22 * temp_l) // 451
         month = (h + temp_l - 7 * m + 114) // 31
         day = ((h + temp_l - 7 * m + 114) % 31) + 1
