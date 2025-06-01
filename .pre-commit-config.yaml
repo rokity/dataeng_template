@@ -6,6 +6,6 @@ repos:
         entry: make validate
         language: system
         files: ^src/,^test/
-        types: [file, python]
+        types: [ python]
         always_run: true
         pass_filenames: false
