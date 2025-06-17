@@ -4,6 +4,7 @@
 
 # Install all dependencies
 install:
+	pip install poetry
 	poetry install
 	poetry run pre-commit install
 
